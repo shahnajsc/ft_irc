@@ -14,8 +14,8 @@ Client::~Client() {
 	nickname_.clear();
 	readBuffer_.clear();
 	sendBuffer_.clear();
+	logMessage(DEBUG, "CLIENT", "Client destroyed");
 	close(clientFD_);
-	logMessage(INFO, "CLIENT", "Client destroyed. ClientFD[" + std::to_string(clientFD_) + "]");
 }
 
 // PUBLIC MEMBER FUNCTIONS

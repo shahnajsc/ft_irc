@@ -27,12 +27,14 @@ void Server::closeServer() {
 	logMessage(INFO, "SERVER", "Server closing [closeServer()]");
 
 	auto it = clients_.begin();
-	while (it != clients_.end()) {
-		if (it->second) {
+	while (it != clients_.end()) 
+	{
+		if (it->first > 4 && it->second) {
+			auto next = std::next(it);
 			closeClient(*it->second);
-			it = clients_.erase(it);
+			it = next;
 		} else {
-			++it;
+			it++;
 		}
 	}
 	clients_.clear();

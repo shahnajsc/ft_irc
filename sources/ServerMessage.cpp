@@ -61,7 +61,7 @@ std::string	Server::createMessage(int code, Client &client, std::string cmd, con
 	} else if (code == ERR_NOTEXTTOSEND) {
 		message += ":No text to send";
 	} else if (code == ERR_UMODEUNKNOWNFLAG) {
-		message += "Unknown MODE flag";
+		message += ":Unknown MODE flag";
 	} else if (code == ERR_CHANOPRIVSNEEDED) {
 		message += cmd + " :You're not channel operator";
 	} else if (code == ERR_NOSUCHCHANNEL) {
@@ -85,7 +85,7 @@ std::string	Server::createMessage(int code, Client &client, std::string cmd, con
 	} else if (code == ERR_ERRONEUSUSER) {
 		message += paramString + " :Erroneous format";
 	} else if (code == RPL_TOPIC) {
-		message += cmd + " :" + params[1];
+		message += paramString;
 	} else if (code == RPL_NOTOPIC) {
 		message += cmd + " :No topic is set";
 	} else if (code == RPL_NAMREPLY) {
@@ -100,6 +100,8 @@ std::string	Server::createMessage(int code, Client &client, std::string cmd, con
 		message += params[0] + " " + params[1];
 	} else if (code == RPL_ENDOFBANLIST) {
 		message += cmd + " :End of channel ban list";
+	} else if (code == RPL_UMODEIS) {
+		message += paramString;
 	} else {
 		message += cmd + " " + paramString; // print all arguments
 	}

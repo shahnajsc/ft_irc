@@ -72,9 +72,6 @@ void Server::handleNick(Client& client, const std::vector<std::string>& params) 
 		logMessage(INFO, "NICK", "Nickname changed to " + params[0] + ". Old Nickname: " + client.getNickname());
 		client.setNickname(params[0]);
 	}
-	//else if (!client.getIsPassValid()) {
-	//	messageHandle(ERR_ALREADYREGISTERED, client, "NICK", params);
-	//}
 	else {
 		client.setNickname(params[0]);
 		logMessage(INFO, "NICK", "Nickname set to " + client.getNickname());
