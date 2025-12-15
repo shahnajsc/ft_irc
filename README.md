@@ -1,9 +1,9 @@
 # ft_irc
-## 📌 Overview
+## Overview
 
 ft_irc is a custom IRC (Internet Relay Chat) server written in C++ as part of the Hive Helsinki core curriculum. It implements the essential features of the IRC protocol — allowing multiple clients to connect, join channels, exchange private messages, and manage channels with operator privileges. While no IRC client was developed for this project, we used Irssi as a reference client to connect, test, and verify the server’s functionality.
 
-## 🎯 Project Focus
+## Project Focus
 
   This project is designed to explore key aspects of network programming and real-time communication:
   - TCP socket programming
@@ -11,7 +11,7 @@ ft_irc is a custom IRC (Internet Relay Chat) server written in C++ as part of th
   - Parsing and processing text-based commands
   - Managing communication between multiple concurrent clients
 
-## ✨ Features
+## Features
 #### Core IRC Server Functionality
 
    - Supports multiple simultaneous client connections (non-blocking sockets).
@@ -37,7 +37,7 @@ ft_irc is a custom IRC (Internet Relay Chat) server written in C++ as part of th
 
  - Clean, informative, and color-coded server activity log for easier monitoring and debugging.
 
-## 🚀 Try It Yourself
+## Try It Yourself
 
 You don’t need to clone or build the project — the IRC server is already live on cloud!
 Just connect using IRC client([Irssi](https://irssi.org/)).
@@ -75,10 +75,10 @@ irssi
 
 
 
-## ⏳ Project Status
+## Project Status
 Submission and peer evaluation is done.
 
-## 🤝 Contributors
+## Contributors
 [Eetu](https://github.com/eetulaine)
 
 [Hager](https://github.com/imhaqer)
